@@ -3,5 +3,8 @@
 	"extends": [
 		"@techmmunity/eslint-config/common",
 		"@techmmunity/eslint-config/ts-nextjs"
-	]
+	],
+	"rules": {
+		"@next/next/no-img-element": "off"
+	}
 }

@@ -9,6 +9,10 @@ module.exports = {
 				blue: {
 					600: "#12aaaf",
 				},
+				beige: "#f9e7cf",
+			},
+			fontFamily: {
+				sans: ["Poppins", "Proxima Nova"],
 			},
 		},
 	},
