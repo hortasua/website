@@ -17,18 +17,20 @@ const Home: NextPage = () => {
 							<h1 className="font-semibold text-center w-screen px-5 md:w-[30rem] md:text-left">
 								Sempre cuidando de você
 							</h1>
-							<div className="relative left-6 bottom-2 w-20 h-[.7rem] rounded-sm bg-brown md:left-24 md:w-28"></div>
+							<div className="relative left-6 bottom-2 w-20 h-[.7rem] rounded-sm bg-brown md:left-24 md:w-28 pre-md:left-[1.6rem] 1/2md:left-[.15rem] 767:left-[10.9rem]"></div>
 						</div>
 						<p className="flex text-center mx-4 md:mx-0 md:text-left md:ml-5">
 							A HortaSua Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 							aliqua.
 						</p>
-						<Link href="/product" passHref>
-							<a className="button text-base mt-4 md:ml-5">
-								Conheça nosso produto
-							</a>
-						</Link>
+						<div className="flex items-center justify-center">
+							<Link href="/product" passHref>
+								<a className="button text-base mt-4 md:ml-5">
+									Conheça nosso produto
+								</a>
+							</Link>
+						</div>
 					</div>
 					<img
 						src="/logo.png"
