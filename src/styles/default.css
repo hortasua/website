@@ -34,5 +34,5 @@ a {
 }
 
 .button {
-	@apply bg-brown px-4 py-5 rounded-md text-white transition-all hover:brightness-90
+	@apply bg-brown px-4 py-5 rounded-md text-white transition-all hover:brightness-90 focus:outline-none focus:drop-shadow-[0_.5rem_.5rem_#b75236]
 }

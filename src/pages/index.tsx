@@ -53,7 +53,7 @@ const Home: NextPage = () => {
 								tempor incididunt ut labore et dolore magna aliqua.
 							</p>
 						</div>
-						<button className="bg-transparent border border-white px-5 py-4 rounded-md transition-all hover:bg-white hover:text-brown">
+						<button className="bg-transparent border border-white px-5 py-4 rounded-md transition-all hover:bg-white hover:text-brown focus:outline-none focus:bg-white focus:text-brown">
 							Saiba o tamanho exato para você
 						</button>
 					</div>
