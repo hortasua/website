@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import { Header } from "web/components/header";
 
 const Home: NextPage = () => {
@@ -10,11 +9,11 @@ const Home: NextPage = () => {
 				<title>HortaSua - Uma empresa sustentável</title>
 			</Head>
 			<Header />
-			<main className="flex flex-col mt-10">
+			<main className="flex flex-col mt-10 gap-64">
 				<div className="flex flex-col-reverse justify-center gap-96 items-center md:flex-row md:mx-20">
 					<div className="flex flex-col gap-3 justify-self-start md:items-start md:text-left">
 						<div className="flex flex-col items-center md:items-start">
-							<h1 className="font-semibold text-center w-screen px-5 md:w-[30rem] md:text-left">
+							<h1 className="text-center w-screen px-5 md:w-[30rem] md:text-left">
 								Sempre cuidando de você
 							</h1>
 							<div className="relative left-6 bottom-2 w-20 h-[.7rem] rounded-sm bg-brown md:left-24 md:w-28 pre-md:left-[1.6rem] 1/2md:left-[.15rem] 767:left-[10.9rem]"></div>
@@ -25,11 +24,9 @@ const Home: NextPage = () => {
 							aliqua.
 						</p>
 						<div className="flex items-center justify-center">
-							<Link href="/product" passHref>
-								<a className="button text-base mt-4 md:ml-5">
-									Conheça nosso produto
-								</a>
-							</Link>
+							<a href="#product" className="button text-base mt-4 md:ml-5">
+								Saiba mais
+							</a>
 						</div>
 					</div>
 					<img
@@ -39,6 +36,22 @@ const Home: NextPage = () => {
 						height="400"
 						className="hidden md:flex"
 					/>
+				</div>
+				<div id="product">
+					<img
+						src="/top-wave.svg"
+						alt="Wave"
+						className="relative top-1 md:top-0"
+					/>
+					<div className="bg-brown flex flex-col items-center justify-center text-white gap-5 h-[30vh] md:h-[50vh]">
+						<div className="flex flex-col items-center justify-center gap-3">
+							<h1 className="text-center">Conheça a TerraNossa!</h1>
+							<p className="max-w-[50vw] text-center">
+								O produto que vai garantir conforto, qualidade e
+								sustentabilidade à alimentação do seu dia-a-dia.
+							</p>
+						</div>
+					</div>
 				</div>
 			</main>
 		</>

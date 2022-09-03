@@ -6,7 +6,7 @@
 
 html,
 body {
-    @apply m-0 p-0 selection:bg-brown selection:text-white
+    @apply m-0 p-0 selection:bg-brown overflow-x-hidden scroll-smooth selection:text-white
 }
 
 h1,
@@ -21,7 +21,7 @@ a {
 }
 
 h1 {
-	@apply text-[2rem] md:text-[3rem]
+	@apply text-[2rem] font-semibold md:text-[3rem]
 }
 
 h2 {
