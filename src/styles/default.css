@@ -4,8 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+	width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+	@apply bg-white
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	@apply bg-blue-600 rounded-b-md hover:bg-teal-500
+  }
+
+
 html,
 body {
+
     @apply m-0 p-0 selection:bg-brown overflow-x-hidden scroll-smooth selection:text-white
 }
 
@@ -29,8 +45,11 @@ h2 {
 }
 
 p,
-a {
-	@apply text-lg md:text-xl
+a,
+label,
+input,
+input:placeholder {
+	@apply text-lg md:text-8xl
 }
 
 .button {
