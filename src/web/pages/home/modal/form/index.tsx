@@ -42,7 +42,7 @@ export const HomeModalForm: FC<HomeModalFormProps> = ({
 			},
 		},
 		quantityOfPeopleLivingTogether: {
-			value: 0,
+			value: 1,
 			discriminant: (form: Form) => {
 				const QUANTITY_OF_MEMBERS_IN_A_SMALL_FAMILY = 2;
 
@@ -174,9 +174,9 @@ export const HomeModalForm: FC<HomeModalFormProps> = ({
 					name="people-living-together"
 					id="people-living-together"
 					className="max-w-md"
-					min="1"
-					max="10"
-					value={1}
+					min={1}
+					max={15}
+					value={form.questions.quantityOfPeopleLivingTogether.value}
 					onChange={changeQuantityOfPeopleThatLiveTogether}
 				/>
 			</div>
