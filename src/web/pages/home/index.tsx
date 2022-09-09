@@ -1,8 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useState } from "react";
+import { Button } from "web/components/button";
 import { Header } from "web/components/header";
 
+import { HomeModal } from "./modal";
+
 export const Home: NextPage = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [quizResult, setQuizResult] = useState("");
+
+	const toggleModal = () => {
+		setQuizResult("");
+		setIsModalOpen(!isModalOpen);
+	};
+
 	return (
 		<>
 			<Head>
@@ -23,7 +35,10 @@ export const Home: NextPage = () => {
 							sustentabilidade e qualidade para a alimentação do seu dia-a-dia.
 						</p>
 						<div className="flex items-center justify-center">
-							<a href="#product" className="button text-base mt-4 md:ml-5">
+							<a
+								href="#product"
+								className="button button-primary text-base mt-4 md:ml-5"
+							>
 								Saiba mais
 							</a>
 						</div>
@@ -54,9 +69,19 @@ export const Home: NextPage = () => {
 								para manter uma boa alimentação.
 							</p>
 						</div>
+						<Button buttonType="secondary" onClick={toggleModal}>
+							Saiba o tamanho exato para você
+						</Button>
 					</div>
 				</div>
 			</main>
+
+			<HomeModal
+				isOpen={isModalOpen}
+				toggle={toggleModal}
+				quizResult={quizResult}
+				setQuizResult={setQuizResult}
+			/>
 		</>
 	);
 };
